@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name = "viewport" content = "width = device-width, user-scalable = no">
+
+<html>
+<head>
+    <title>Capitol City Weather</title>
+
+    <!-- JQUERY -- ADDITIONAL JS SUPPORT -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- BOOTSTRAP -- EASY FORMATTING -->    
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <!-- D3js -- SVG MAPPING FUNCTIONS -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+
+    <!-- PAGE STYLE & SCRIPTS -->
+    <link href="index.css" rel="stylesheet">
+    <script src="index.js"></script>
+
+</head>
+<body>
+    <!-- JAVASCRIPT & HTML TEMPLATES -- WILL BE USED WITH DYNAMIC DATA -- CALLED BY ID -->
+    <script type="template" id="template_tweet">
+        <div class="well">
+            <img src="{3}" alt="{1}" class="twitterImg" />
+            <b>{1}</b><br>
+            {2}
+            <br>        
+            <a href="https://twitter.com/intent/retweet?tweet_id={0}" target="_blank">retweet</a>
+        </div>
+    </script>
+    
+    
+    <!-- HEADING -->
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Capitol City Weather</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- MAIN INTERFACE -->
+    <div class="container" id="container-main">
+        <div class="row">
+            <div class="col-xs-12 col-sm-7">            
+                    <div id="d3_map"> <!-- D3JS - SVG based map will be generated here --> </div>
+            </div>
+            <div class="col-xs-12 col-sm-5">
+                    <button id="locationClose" class="btn btn-default btn-sm pull-right" type="button">X</button>
+                    <div id="locationTitle"> <!-- Location title of the clicked will be added here --> </div>
+                    <div id="locationWeather"> <!-- Location weather of the clicked will be added here --> 
+                        <div class="well">Click on a state to learn more about the current weather.</div>
+                    </div>
+                    <div id="locationTweets"> <!-- Location tweets will be reported here --> </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

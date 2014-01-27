@@ -1,0 +1,43 @@
+
+/* MAP DISPlAY */
+    path {
+        fill: #ccc;
+        stroke: #111;
+        stroke-width: .5px;
+    }
+    
+    path.state:hover {
+        fill: #4A7DC0;
+    }
+    
+    svg { 
+        position:fixed; 
+        top:0; 
+        left:0; 
+        height:100%; 
+        width:100% 
+    }
+
+
+/* TWITTER */
+    .twitterImg{
+        display:block;
+        float:left;  
+        padding:5px;
+    }
+
+
+/*PAGE STURCTURE */
+    #container-main{
+        margin-top:60px;
+    }
+
+    #locationTitle{
+        font-size:2em;
+    }
+
+
+
+
+
+
